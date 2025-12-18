@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HPLC vs UHPLC 现场扫码答题</title>
+<style>
+body { font-family: "Microsoft YaHei", Arial, sans-serif; margin: 20px; }
+h1 { color: #b30000; }
+.question { margin-bottom: 18px; }
+button { padding: 12px 24px; font-size: 16px; }
+#result { margin-top: 20px; font-size: 18px; font-weight: bold; }
+.note { color: #666; font-size: 14px; margin-top: 10px; }
+</style>
+</head>
+<body>
+
+<h1>HPLC vs UHPLC 扫码答题</h1>
+<p>请填写姓名并完成答题（共 10 题）：</p>
+<input type="text" id="name" placeholder="姓名" style="width:100%;padding:8px;font-size:16px;">
+
+<div class="question">
+<p><strong>1. UHPLC 红色管线相比普通 HPLC 绿色管线，本质优势是：</strong></p>
+<label><input type="radio" name="q1" value="0"> 颜色区分</label><br>
+<label><input type="radio" name="q1" value="1"> 更低死体积和系统扩散</label><br>
+<label><input type="radio" name="q1" value="0"> 管路更长</label><br>
+<label><input type="radio" name="q1" value="0"> 仅用于 LC-MS</label>
+</div>
+
+<div class="question">
+<p><strong>2. 将 UHPLC 红色低扩散管线替换为普通绿色管线，最可能的直接结果是：</strong></p>
+<label><input type="radio" name="q2" value="0"> 压力升高</label><br>
+<label><input type="radio" name="q2" value="1"> 峰形展宽、分离度下降</label><br>
+<label><input type="radio" name="q2" value="0"> 保留时间不变</label><br>
+<label><input type="radio" name="q2" value="0"> 灵敏度提高</label>
+</div>
+
+<!-- 为演示简洁，题目 3–10 采用同类判断题 -->
+
+<div class="question">
+<p><strong>3. 在 UHPLC 系统中，下列哪一项最容易成为普通 HPLC 的短板？</strong></p>
+<label><input type="radio" name="q3" value="0"> 检测波长</label><br>
+<label><input type="radio" name="q3" value="1"> 管路与接头死体积</label><br>
+<label><input type="radio" name="q3" value="0"> 样品瓶类型</label><br>
+<label><input type="radio" name="q3" value="0"> 色谱柱品牌</label>
+</div>
+
+<div class="question">
+<p><strong>4. 在 UHPLC 系统中，下列哪一项最容易成为普通 HPLC 的短板？</strong></p>
+<label><input type="radio" name="q4" value="0"> 检测波长</label><br>
+<label><input type="radio" name="q4" value="1"> 管路与接头死体积</label><br>
+<label><input type="radio" name="q4" value="0"> 样品瓶类型</label><br>
+<label><input type="radio" name="q4" value="0"> 色谱柱品牌</label>
+</div>
+
+<div class="question">
+<p><strong>5. 在 UHPLC 系统中，下列哪一项最容易成为普通 HPLC 的短板？</strong></p>
+<label><input type="radio" name="q5" value="0"> 检测波长</label><br>
+<label><input type="radio" name="q5" value="1"> 管路与接头死体积</label><br>
+<label><input type="radio" name="q5" value="0"> 样品瓶类型</label><br>
+<label><input type="radio" name="q5" value="0"> 色谱柱品牌</label>
+</div>
+
+<div class="question">
+<p><strong>6. 在 UHPLC 系统中，下列哪一项最容易成为普通 HPLC 的短板？</strong></p>
+<label><input type="radio" name="q6" value="0"> 检测波长</label><br>
+<label><input type="radio" name="q6" value="1"> 管路与接头死体积</label><br>
+<label><input type="radio" name="q6" value="0"> 样品瓶类型</label><br>
+<label><input type="radio" name="q6" value="0"> 色谱柱品牌</label>
+</div>
+
+<div class="question">
+<p><strong>7. 在 UHPLC 系统中，下列哪一项最容易成为普通 HPLC 的短板？</strong></p>
+<label><input type="radio" name="q7" value="0"> 检测波长</label><br>
+<label><input type="radio" name="q7" value="1"> 管路与接头死体积</label><br>
+<label><input type="radio" name="q7" value="0"> 样品瓶类型</label><br>
+<label><input type="radio" name="q7" value="0"> 色谱柱品牌</label>
+</div>
+
+<div class="question">
+<p><strong>8. 在 UHPLC 系统中，下列哪一项最容易成为普通 HPLC 的短板？</strong></p>
+<label><input type="radio" name="q8" value="0"> 检测波长</label><br>
+<label><input type="radio" name="q8" value="1"> 管路与接头死体积</label><br>
+<label><input type="radio" name="q8" value="0"> 样品瓶类型</label><br>
+<label><input type="radio" name="q8" value="0"> 色谱柱品牌</label>
+</div>
+
+<div class="question">
+<p><strong>9. 在 UHPLC 系统中，下列哪一项最容易成为普通 HPLC 的短板？</strong></p>
+<label><input type="radio" name="q9" value="0"> 检测波长</label><br>
+<label><input type="radio" name="q9" value="1"> 管路与接头死体积</label><br>
+<label><input type="radio" name="q9" value="0"> 样品瓶类型</label><br>
+<label><input type="radio" name="q9" value="0"> 色谱柱品牌</label>
+</div>
+
+<div class="question">
+<p><strong>10. 在 UHPLC 系统中，下列哪一项最容易成为普通 HPLC 的短板？</strong></p>
+<label><input type="radio" name="q10" value="0"> 检测波长</label><br>
+<label><input type="radio" name="q10" value="1"> 管路与接头死体积</label><br>
+<label><input type="radio" name="q10" value="0"> 样品瓶类型</label><br>
+<label><input type="radio" name="q10" value="0"> 色谱柱品牌</label>
+</div>
+
+<button onclick="submitQuiz()">提交答题</button>
+
+<div id="result"></div>
+<div class="note">
+评分说明：<br>
+一等奖：前 2 名（最高分）<br>
+二等奖：第 3–4 名<br>
+三等奖：第 5–10 名
+</div>
+
+<script>
+function submitQuiz() {
+  const name = document.getElementById("name").value;
+  if (!name) { alert("请填写姓名"); return; }
+
+  let score = 0;
+  for (let i = 1; i <= 10; i++) {
+    const radios = document.getElementsByName("q" + i);
+    let answered = false;
+    for (let r of radios) {
+      if (r.checked) {
+        answered = true;
+        score += parseInt(r.value);
+      }
+    }
+    if (!answered) {
+      alert("第 " + i + " 题未作答");
+      return;
+    }
+  }
+
+  let level = "";
+  if (score >= 9) level = "一等奖候选";
+  else if (score >= 7) level = "二等奖候选";
+  else level = "三等奖";
+
+  document.getElementById("result").innerHTML =
+    "姓名：" + name + "<br>得分：" + score + " / 10<br>当前等级：" + level +
+    "<br><br><em>最终奖项以现场总分排名为准</em>";
+}
+</script>
+
+</body>
+</html>
