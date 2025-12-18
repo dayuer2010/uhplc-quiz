@@ -2,146 +2,121 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HPLC vs UHPLC 现场扫码答题</title>
+<title>UHPLC 技术交流在线答题（30题）</title>
 <style>
-body { font-family: "Microsoft YaHei", Arial, sans-serif; margin: 20px; }
-h1 { color: #b30000; }
-.question { margin-bottom: 18px; }
-button { padding: 12px 24px; font-size: 16px; }
-#result { margin-top: 20px; font-size: 18px; font-weight: bold; }
-.note { color: #666; font-size: 14px; margin-top: 10px; }
+body{font-family:Arial,Helvetica,sans-serif;background:#f5f7fa;padding:20px}
+.container{max-width:1000px;margin:auto;background:#fff;padding:30px;border-radius:8px}
+h1{color:#000}
+.question{margin:18px 0}
+.options label{display:block;margin-left:10px}
+button{padding:10px 18px;margin-right:10px;font-size:16px}
+.red{background:#c0392b;color:#fff;border:none}
+table{width:100%;border-collapse:collapse;margin-top:20px}
+th,td{border:1px solid #ccc;padding:8px;text-align:center}
 </style>
 </head>
 <body>
+<div class="container">
+<h1>UHPLC 技术交流在线答题（30题）</h1>
+姓名：<input id="name" placeholder="请输入姓名"><br><br>
 
-<h1>HPLC vs UHPLC 扫码答题</h1>
-<p>请填写姓名并完成答题（共 10 题）：</p>
-<input type="text" id="name" placeholder="姓名" style="width:100%;padding:8px;font-size:16px;">
+<form id="quiz"></form>
 
-<div class="question">
-<p><strong>1. UHPLC 红色管线相比普通 HPLC 绿色管线，本质优势是：</strong></p>
-<label><input type="radio" name="q1" value="0"> 颜色区分</label><br>
-<label><input type="radio" name="q1" value="1"> 更低死体积和系统扩散</label><br>
-<label><input type="radio" name="q1" value="0"> 管路更长</label><br>
-<label><input type="radio" name="q1" value="0"> 仅用于 LC-MS</label>
-</div>
+<button type="button" onclick="submitQuiz()">提交</button>
+<button type="button" class="red" onclick="clearAll()">清空所有记录（讲师用）</button>
 
-<div class="question">
-<p><strong>2. 将 UHPLC 红色低扩散管线替换为普通绿色管线，最可能的直接结果是：</strong></p>
-<label><input type="radio" name="q2" value="0"> 压力升高</label><br>
-<label><input type="radio" name="q2" value="1"> 峰形展宽、分离度下降</label><br>
-<label><input type="radio" name="q2" value="0"> 保留时间不变</label><br>
-<label><input type="radio" name="q2" value="0"> 灵敏度提高</label>
-</div>
+<h2 id="score"></h2>
 
-<!-- 为演示简洁，题目 3–10 采用同类判断题 -->
-
-<div class="question">
-<p><strong>3. 在 UHPLC 系统中，下列哪一项最容易成为普通 HPLC 的短板？</strong></p>
-<label><input type="radio" name="q3" value="0"> 检测波长</label><br>
-<label><input type="radio" name="q3" value="1"> 管路与接头死体积</label><br>
-<label><input type="radio" name="q3" value="0"> 样品瓶类型</label><br>
-<label><input type="radio" name="q3" value="0"> 色谱柱品牌</label>
-</div>
-
-<div class="question">
-<p><strong>4. 在 UHPLC 系统中，下列哪一项最容易成为普通 HPLC 的短板？</strong></p>
-<label><input type="radio" name="q4" value="0"> 检测波长</label><br>
-<label><input type="radio" name="q4" value="1"> 管路与接头死体积</label><br>
-<label><input type="radio" name="q4" value="0"> 样品瓶类型</label><br>
-<label><input type="radio" name="q4" value="0"> 色谱柱品牌</label>
-</div>
-
-<div class="question">
-<p><strong>5. 在 UHPLC 系统中，下列哪一项最容易成为普通 HPLC 的短板？</strong></p>
-<label><input type="radio" name="q5" value="0"> 检测波长</label><br>
-<label><input type="radio" name="q5" value="1"> 管路与接头死体积</label><br>
-<label><input type="radio" name="q5" value="0"> 样品瓶类型</label><br>
-<label><input type="radio" name="q5" value="0"> 色谱柱品牌</label>
-</div>
-
-<div class="question">
-<p><strong>6. 在 UHPLC 系统中，下列哪一项最容易成为普通 HPLC 的短板？</strong></p>
-<label><input type="radio" name="q6" value="0"> 检测波长</label><br>
-<label><input type="radio" name="q6" value="1"> 管路与接头死体积</label><br>
-<label><input type="radio" name="q6" value="0"> 样品瓶类型</label><br>
-<label><input type="radio" name="q6" value="0"> 色谱柱品牌</label>
-</div>
-
-<div class="question">
-<p><strong>7. 在 UHPLC 系统中，下列哪一项最容易成为普通 HPLC 的短板？</strong></p>
-<label><input type="radio" name="q7" value="0"> 检测波长</label><br>
-<label><input type="radio" name="q7" value="1"> 管路与接头死体积</label><br>
-<label><input type="radio" name="q7" value="0"> 样品瓶类型</label><br>
-<label><input type="radio" name="q7" value="0"> 色谱柱品牌</label>
-</div>
-
-<div class="question">
-<p><strong>8. 在 UHPLC 系统中，下列哪一项最容易成为普通 HPLC 的短板？</strong></p>
-<label><input type="radio" name="q8" value="0"> 检测波长</label><br>
-<label><input type="radio" name="q8" value="1"> 管路与接头死体积</label><br>
-<label><input type="radio" name="q8" value="0"> 样品瓶类型</label><br>
-<label><input type="radio" name="q8" value="0"> 色谱柱品牌</label>
-</div>
-
-<div class="question">
-<p><strong>9. 在 UHPLC 系统中，下列哪一项最容易成为普通 HPLC 的短板？</strong></p>
-<label><input type="radio" name="q9" value="0"> 检测波长</label><br>
-<label><input type="radio" name="q9" value="1"> 管路与接头死体积</label><br>
-<label><input type="radio" name="q9" value="0"> 样品瓶类型</label><br>
-<label><input type="radio" name="q9" value="0"> 色谱柱品牌</label>
-</div>
-
-<div class="question">
-<p><strong>10. 在 UHPLC 系统中，下列哪一项最容易成为普通 HPLC 的短板？</strong></p>
-<label><input type="radio" name="q10" value="0"> 检测波长</label><br>
-<label><input type="radio" name="q10" value="1"> 管路与接头死体积</label><br>
-<label><input type="radio" name="q10" value="0"> 样品瓶类型</label><br>
-<label><input type="radio" name="q10" value="0"> 色谱柱品牌</label>
-</div>
-
-<button onclick="submitQuiz()">提交答题</button>
-
-<div id="result"></div>
-<div class="note">
-评分说明：<br>
-一等奖：前 2 名（最高分）<br>
-二等奖：第 3–4 名<br>
-三等奖：第 5–10 名
+<h2>现场成绩榜</h2>
+<table>
+<thead><tr><th>排名</th><th>姓名</th><th>得分</th></tr></thead>
+<tbody id="rank"></tbody>
+</table>
 </div>
 
 <script>
-function submitQuiz() {
-  const name = document.getElementById("name").value;
-  if (!name) { alert("请填写姓名"); return; }
+const questions = [
+["下列关于 UHPLC 的描述，正确的是：",["A. 仅指高流速液相色谱分离技术","B. 使用亚 2 µm 全多孔或亚三微米表面多孔填料的液相色谱分离技术","C. 只能用于 LC-MS","D. 只能在 1290 系统上运行"]],
+["与 5 µm 填料相比，1.8 µm 填料对色谱分离的主要影响是：",["A. 降低柱效","B. 提高柱效、缩短分析时间","C. 改变检测波长","D. 降低系统压力"]],
+["Poroshell 色谱柱采用的核心填料技术是：",["A. 全多孔硅胶","B. 核壳 / 表面多孔填料","C. 聚合物填料","D. 单分散树脂填料"]],
+["从 HPLC 转换为 UHPLC 的首要目标是：",["A. 改变流动相组成","B. 提高分离选择性","C. 在保持分离度前提下提高分析速度","D. 更换检测器"]],
+["判断两根色谱柱是否等效，最关键的指标是：",["A. 内径","B. 粒径","C. L/dp 或柱效 N","D. 最大耐压"]],
+["在方法转换中，下列哪项参数通常保持不变？",["A. 梯度时间","B. 流速","C. 流动相种类","D. 进样体积"]],
+["保持相同线速度时，体积流速与下列哪个参数平方成正比？",["A. 柱长","B. 填料粒径","C. 内径","D. 梯度时间"]],
+["若方法转换前使用 4.6 mm 色谱柱流速 1 mL/min，3.0 mm 内径的流速约为：",["A. 1.0","B. 0.6","C. 0.4","D. 0.2"]],
+["当色谱柱长度缩短 3 倍时，梯度时间应：",["A. 不变","B. 增加 3 倍","C. 缩短约 3 倍","D. 仅调流速"]],
+["进样体积转换的基本原则是：",["A. 与柱长成正比","B. 与柱体积成正比","C. 与流速成正比","D. 与压力成正比"]],
+["UHPLC 方法优化中最直接的加速手段是：",["A. 增加进样量","B. 提高流速","C. 降低柱温","D. 改变检测波长"]],
+["提高流速的限制因素不包括：",["A. 分离度下降","B. 系统耐压","C. 流速上限","D. 检测波长"]],
+["UHPLC 常用小内径色谱柱的主要原因是：",["A. 降低柱效","B. 节省溶剂、提高灵敏度","C. 降低线速度","D. 简化系统"]],
+["哪项性质给 UHPLC 分离带来好处？",["A. 高灯能量","B. 大流通池","C. 更高采样速率","D. 低柱温"]],
+["UHPLC 通常建议采样频率至少：",["A. 2.5","B. 10","C. 40","D. 80"]],
+["相同填料化学性质下，不同粒径表现为：",["A. 不同选择性","B. 相同选择性","C. 不可比较","D. 完全不同"]],
+["USP <621> 中不允许调整的是：",["A. 流速","B. 柱温","C. 检测波长","D. 进样体积"]],
+["USP <621> 等度方法流速允许调整范围：",["A. ±10%","B. ±20%","C. ±50%","D. 不允许"]],
+["中国药典 2020 对 UHPLC 的态度：",["A. 不区分","B. 明确区分","C. 仅研发","D. 不允许"]],
+["法规条件下方法转换需进行：",["A. 验证","B. 方法确认","C. 开发","D. 优化"]],
+["法规下由全多孔到表面多孔填料：",["A. 不允许","B. 仅研发","C. 键合相一致允许","D. 需重新申报"]],
+["方法转换前必须了解：",["A. 色谱柱品牌和键合相","B. 操作人员","C. 实验室面积","D. 样品批次"]],
+["L/dp 相同通常意味着：",["A. 相同压力","B. 相同柱效","C. 相同流速","D. 相同梯度"]],
+["梯度方法中延迟体积主要影响：",["A. 峰面积","B. 保留时间和分离度","C. 灵敏度","D. 噪声"]],
+["UHPLC 中柱温调整主要作用：",["A. 改变波长","B. 改变流动相","C. 影响保留和压力","D. 改变粒径"]],
+["哪项不是 UHPLC 典型收益？",["A. 时间缩短","B. 通量提高","C. 溶剂消耗增加","D. 利用率提高"]],
+["方法转换中进样体积通常：",["A. 增加","B. 不变","C. 按柱体积减小","D. 随意"]],
+["提高采样速率的好处是：",["A. 降压","B. 柱效计算更准","C. 改变选择性","D. 省溶剂"]],
+["1260 与 1290 的正确说法是：",["A. 仅1290","B. 1260合适条件可","C. 1260不能用","D. 不合规"]],
+["方法转换软件不包括：",["A. 计算参数","B. 预测压力","C. 节省评估","D. 自动实验"]]
+];
 
-  let score = 0;
-  for (let i = 1; i <= 10; i++) {
-    const radios = document.getElementsByName("q" + i);
-    let answered = false;
-    for (let r of radios) {
-      if (r.checked) {
-        answered = true;
-        score += parseInt(r.value);
-      }
-    }
-    if (!answered) {
-      alert("第 " + i + " 题未作答");
-      return;
-    }
+const answers = ["B","B","B","C","C","C","C","C","C","B","B","D","B","C","B","B","C","C","B","B","C","A","B","B","C","C","C","B","B","D"];
+
+const quiz = document.getElementById("quiz");
+questions.forEach((q,i)=>{
+  let div=document.createElement("div");
+  div.className="question";
+  div.innerHTML=`<b>${i+1}. ${q[0]}</b>`;
+  let optDiv=document.createElement("div");
+  optDiv.className="options";
+  q[1].forEach(o=>{
+    let key=o[0];
+    optDiv.innerHTML+=`<label><input type="radio" name="q${i}" value="${key}"> ${o}</label>`;
+  });
+  div.appendChild(optDiv);
+  quiz.appendChild(div);
+});
+
+function submitQuiz(){
+  const name=document.getElementById("name").value||"匿名";
+  let score=0;
+  answers.forEach((a,i)=>{
+    let sel=document.querySelector(`input[name=q${i}]:checked`);
+    if(sel && sel.value===a) score++;
+  });
+  document.getElementById("score").innerText=`${name} 得分： ${score} / 30`;
+  let data=JSON.parse(localStorage.getItem("rank")||"[]");
+  data.push({name,score});
+  data.sort((a,b)=>b.score-a.score);
+  localStorage.setItem("rank",JSON.stringify(data));
+  render();
+}
+
+function render(){
+  let data=JSON.parse(localStorage.getItem("rank")||"[]");
+  let tbody=document.getElementById("rank");
+  tbody.innerHTML="";
+  data.forEach((d,i)=>{
+    tbody.innerHTML+=`<tr><td>${i+1}</td><td>${d.name}</td><td>${d.score}</td></tr>`;
+  });
+}
+render();
+
+function clearAll(){
+  if(confirm("确定清空？")){
+    localStorage.clear();
+    render();
+    document.getElementById("score").innerText="";
   }
-
-  let level = "";
-  if (score >= 9) level = "一等奖候选";
-  else if (score >= 7) level = "二等奖候选";
-  else level = "三等奖";
-
-  document.getElementById("result").innerHTML =
-    "姓名：" + name + "<br>得分：" + score + " / 10<br>当前等级：" + level +
-    "<br><br><em>最终奖项以现场总分排名为准</em>";
 }
 </script>
-
 </body>
 </html>
